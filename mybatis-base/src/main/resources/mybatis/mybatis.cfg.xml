@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>   <!-- 扫描指定包下的类，类名称就是别名 -->
+        <package name="com.lion.mybatis.vo"/>
+    </typeAliases>
     <environments default="mysqlDev">    <!-- 定义数据库连接的相关配置 -->
         <environment id="mysqlDev"> <!-- 配置MySQL数据库连接 -->
             <transactionManager type="jdbc"/>   <!-- 事务控制类型 -->
