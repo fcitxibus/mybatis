@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义所有的SQL语句的映射， 对于本实体而言相关的所有的SQL代码都在此定义 -->
+<mapper namespace="com.lion.mapper.NewsNS">   <!-- SSM整合的时候，这个命名空间异常重要 -->
+    <!-- 编写增加的操作语句，其中id随意定义，只要有意义即可 -->
+    <insert id="doCreate" parameterType="com.lion.mybatis.vo.News">
+        INSERT INTO news(title,content) VALUES (#{title},#{content}) ;
+    </insert>
+</mapper>
